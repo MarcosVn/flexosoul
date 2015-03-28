@@ -1,0 +1,21 @@
+footer {
+	text-align: center;
+	background: black;
+	padding: 15px 0 5px 0;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}
+
+section p {
+	margin: 30px 0;
+}
+
+header {
+	margin-top: 50px;
+}
+
+.section-margin-top {
+	margin-top: 5%;
+}
+
