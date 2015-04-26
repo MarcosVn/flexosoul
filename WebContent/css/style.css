@@ -1,21 +1,115 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Roboto); /* GOOGLE FREE FONTS */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.page-content {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 70px auto;
+}
+
+.card {
+    border: 1px solid #eee;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.produto {
+    min-height: 200px;
+}
+
+.head-set {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.pad-bottom {
+    padding-bottom: 60px;
+}
+
+.navbar-default {
+    background-color: rgb(35, 133, 161);
+    border-color: transparent;
+    color: #fff;
+}
+
+    .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover {
+        color: #fff;
+    }
+
+.navbar-brand {
+    padding: 15px 15px;
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color:#fff;
+}
+
+#home {
+    background: url(../img/home.jpg) no-repeat center center; /*Full Witdth background image*/
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    min-height: 600px;
+}
+    /*STYLE FOR OVERLAY CLASS - WHICH IS ABOVE IMAGE WITH OPACITY/TRANSPARENCY 0.75*/
+    #home .overlay {
+        padding-top: 90px;
+        background-color: rgba(35, 133, 161,0.75); /*.75 opacity of the color so that background image is visible*/
+        min-height: 600px;
+        color: #fff;
+    }
+
+    #home h1 {
+        padding-top: 80px;
+        font-weight: 900;
+        font-size: 100px;
+        font-family: 'Browallia New';
+    }
+
+.p-cls {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.parallax-like {
+    background: url(../img/stats.jpg) no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+    .parallax-like .overlay {
+        min-height: 200px;
+        background: rgba(35, 133, 161,0.9);
+        font-size: 40px;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
 footer {
-	text-align: center;
-	background: black;
-	padding: 15px 0 5px 0;
-    height: 50px;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 900;
+    background-color: rgb(35, 133, 161);
+    color: #fff;
     bottom: 0;
-    width: 100%;
 }
 
-section p {
-	margin: 30px 0;
-}
-
-header {
-	margin-top: 50px;
-}
-
-.section-margin-top {
-	margin-top: 5%;
+footer a, footer a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
