@@ -1,16 +1,18 @@
-Ôªø<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <title>FlexoSoul</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/font-awesome.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <script src="js/jquery-1.11.1.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/custom.js"></script>
+    <link href="static/css/bootstrap.css" rel="stylesheet" />
+    <link href="static/css/font-awesome.css" rel="stylesheet" />
+    <link href="static/css/style.css" rel="stylesheet" />
+    <script src="static/js/jquery-1.11.1.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="staticjs/jquery.easing.min.js"></script>
+    <script src="static/js/custom.js"></script>
 
 
 </head>
@@ -29,9 +31,10 @@
             </div>
             <div class="navbar-collapse collapse navbar-right scroll-me">
                 <ul class="nav navbar-nav ">
-                    <li><a href="#home">IN√çCIO</a></li>
-                    <li><a href="#services">SERVI√áOS</a></li>
-                    <li><a href="#contact">CONTATO</a></li>
+                    <li><a href="#home">InÌcio</a></li>
+                    <li><a href="#services">ServiÁos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                	<li><a href="categoria">Categoria</a>
                 </ul>
             </div>
 
@@ -58,7 +61,7 @@
         <div class="container">
             <div class="row text-center pad-bottom">
                 <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-                    <h2 class="head-set">SERVI√áOS</h2>
+                    <h2 class="head-set">SERVI«OS</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -121,7 +124,7 @@
         <div class="container">
             <div class="row text-center ">
                 <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-                    <h2 class="head-set">LOCALIZA√á√ÉO</h2>
+                    <h2 class="head-set">LOCALIZA«√O</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
@@ -133,8 +136,8 @@
 
 
                 <div class="col-md-12">
-                    <h3>Rua dos bobos, n¬∞ 0</h3>
-                    <h3>S√£o Jos√© dos Campos - SP</h3>
+                    <h3>Rua dos bobos, n∞ 0</h3>
+                    <h3>S„o JosÈ dos Campos - SP</h3>
                     <h3><strong>Email :</strong> email@com.br</h3>
 
                 </div>
@@ -144,7 +147,7 @@
     </section>
     
     <footer>
-        ¬© 2015 FlexoSoul
+        © 2015 FlexoSoul
     </footer>
 
 </body>

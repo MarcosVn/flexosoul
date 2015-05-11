@@ -1,16 +1,18 @@
-<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <title>FlexoSoul</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/font-awesome.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-	<script src="js/jquery-1.11.1.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/custom.js"></script>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" />
+    <link href="../static/css/font-awesome.css" rel="stylesheet" />
+    <link href="../static/css/style.css" rel="stylesheet" />
+	<script src="../static/js/jquery-1.11.1.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/jquery.easing.min.js"></script>
+    <script src="../static/js/custom.js"></script>
 
 </head>
 <body>
@@ -81,9 +83,7 @@
     </div>
     
     <footer>
-        © 2015 FlexoSoul
+        2015 FlexoSoul
     </footer>
-
 </body>
-
 </html>
