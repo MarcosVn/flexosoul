@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package br.com.flexosoul.dao;
 
 import java.sql.Connection;
@@ -6,32 +9,24 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import br.com.flexosoul.connection.ConnectionFactory;
 import br.com.flexosoul.model.Categoria;
-import br.com.flexosoul.model.Produto;
 
 /**
  * @author marcos
  *
  */
-public class ProdutoDao {
-	private final String INSERT = "insert into produto values(null,?,?,?,?)";
-	private final String CONSULTA = "select * from produto";
-	private final String EXCLUIR = "DELETE FROM produto WHERE id = ?";
-	private final String EDITAR = "UPDATE produto SET nome = ?, descricao = ?, "
-			+ "tipo = ? WHERE id = ?";
+public class CategoriaDao {
+	private final String INSERT = "insert into categoria values(null,?,?)";
+	private final String CONSULTA = "select * from categoria";
+	private final String EXCLUIR = "DELETE FROM categoria WHERE id = ?";
+	private final String EDITAR = "UPDATE categoria SET nome = ?, descricao = ? WHERE id = ?";
 	
 	private ConnectionFactory factory;
 
-	public ProdutoDao() {
+	public CategoriaDao() {
 		factory = new ConnectionFactory();
 	}
-
-	/**
-	 * Por enquanto não considerei as imagens no dao
-	 */
-	
 
 	/**
 	 * 
@@ -39,29 +34,26 @@ public class ProdutoDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	private Produto buildProdutoFromResultSet(ResultSet rs)
+	private Categoria buildCategoriaFromResultSet(ResultSet rs)
 			throws SQLException {
 		
-		Categoria cat = (Categoria)rs.getObject("categoria");
-		
-		return new Produto(rs.getString("nome"),
-				rs.getString("descricao"), 
-				cat);
+		return new Categoria(rs.getString("nome"),
+				rs.getString("descricao"));
 	}
 	
 	/**
 	 * 
-	 * @param produto
+	 * @param categoria
 	 */
-	public void salvar(Produto produto) {
+	public void salvar(Categoria categoria) {
 		Connection conexao = null;
+		
 		try {
 			conexao = factory.createConnection();
 
 			PreparedStatement st = conexao.prepareStatement(INSERT);
-			st.setString(1, produto.getNome());
-			st.setString(2, produto.getDescricao());
-			st.setObject(3, produto.getProdutoTipo());
+			st.setString(1, categoria.getNome());
+			st.setString(2, categoria.getDescricao());
 			st.execute();
 
 		} catch (SQLException e) {
@@ -81,8 +73,8 @@ public class ProdutoDao {
 	 * @param nome
 	 * @return
 	 */
-	public List<Produto> pesquisar(String nome) {
-		List<Produto> produtos = new ArrayList<>();
+	public List<Categoria> pesquisar(String nome) {
+		List<Categoria> categorias = new ArrayList<>();
 		try {
 			Connection connection = factory.createConnection();
 
@@ -92,7 +84,7 @@ public class ProdutoDao {
 			ResultSet rs = st.executeQuery();
 
 			while (rs.next()) {
-				produtos.add(buildProdutoFromResultSet(rs));
+				categorias.add(buildCategoriaFromResultSet(rs));
 			}
 			
 			rs.close();
@@ -103,7 +95,7 @@ public class ProdutoDao {
 			e.printStackTrace();
 		}
 		
-		return produtos;
+		return categorias;
 	}
 
 	/**
@@ -111,18 +103,18 @@ public class ProdutoDao {
 	 * @param idProduto
 	 * @return
 	 */
-	public Produto pesquisarPorId(int idProduto) {
-		Produto produto = null;
+	public Categoria pesquisarPorId(int idCategoria) {
+		Categoria categoria = null;
 		try {
 			Connection connection = factory.createConnection();
 
 			String sql = CONSULTA.concat(" where id = ?");
 			PreparedStatement st = connection.prepareStatement(sql);
-			st.setInt(1, idProduto);
+			st.setInt(1, idCategoria);
 			ResultSet rs = st.executeQuery();
 
 			if (rs.next()) {
-				produto = buildProdutoFromResultSet(rs);
+				categoria = buildCategoriaFromResultSet(rs);
 			}
 			rs.close();
 			st.close();
@@ -132,28 +124,35 @@ public class ProdutoDao {
 			e.printStackTrace();
 		}
 		
-		return produto;
+		return categoria;
 	}
 
-	
-	public void excluir(Produto produto) {
+	/**
+	 * 
+	 * @param id
+	 */
+	public void excluir(int id) {
 		try {
 			Connection connection = factory.createConnection();
 			PreparedStatement st = connection.prepareStatement(EXCLUIR);
-			st.setInt(1, produto.getId());
+			st.setInt(1, id);
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void editar(Produto produto) {
+	
+	/**
+	 * 
+	 * @param categoria
+	 */
+	public void editar(Categoria categoria) {
 		try {
 			Connection connection = factory.createConnection();
 			PreparedStatement st = connection.prepareStatement(EDITAR);
-			st.setString(1, produto.getNome());
-			st.setString(2, produto.getDescricao());
-			st.setObject(3, produto.getProdutoTipo());
+			st.setString(1, categoria.getNome());
+			st.setString(2, categoria.getDescricao());
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

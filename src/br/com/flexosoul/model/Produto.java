@@ -7,12 +7,12 @@ public class Produto {
 	private int id;
 	private String nome;
 	private String descricao;
-	private ProdutoTipo produtoTipo;
+	private Categoria produtoTipo;
 	private List<File> produtoImagens = null;
 	
 	public Produto() {}
 	
-	public Produto(String nome, String descricao, ProdutoTipo produtoTipo,
+	public Produto(String nome, String descricao, Categoria produtoTipo,
 			List<File> produtoImagens) {
 		
 		this.nome = nome;
@@ -21,7 +21,7 @@ public class Produto {
 		this.produtoImagens = produtoImagens;
 	}
 	
-	public Produto(String nome, String descricao, ProdutoTipo produtoTipo) {
+	public Produto(String nome, String descricao, Categoria produtoTipo) {
 		this.nome = nome;
 		this.descricao = descricao;
 		this.produtoTipo = produtoTipo;
@@ -39,10 +39,10 @@ public class Produto {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public ProdutoTipo getProdutoTipo() {
+	public Categoria getProdutoTipo() {
 		return produtoTipo;
 	}
-	public void setProdutoTipo(ProdutoTipo produtoTipo) {
+	public void setProdutoTipo(Categoria produtoTipo) {
 		this.produtoTipo = produtoTipo;
 	}
 	public List<File> getEtiquetaImagens() {
@@ -55,7 +55,6 @@ public class Produto {
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}

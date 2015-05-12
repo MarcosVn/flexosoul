@@ -30,9 +30,9 @@
             </div>
             <div class="navbar-collapse collapse navbar-right scroll-me">
                 <ul class="nav navbar-nav ">
-                    <li><a href="index.html">IN√çCIO</a></li>
-                    <li><a href="index.html#services">SERVI√áOS</a></li>
-                    <li><a href="index.html#contact">CONTATO</a></li>
+                    <li><a href="index.html">InÌcio</a></li>
+                    <li><a href="index.html#services">ServiÁos</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
                 </ul>
             </div>
 
@@ -49,6 +49,10 @@
                     <div class="form-group">
                         <label>Nome</label>
                         <input type="text" class="form-control"></textarea>
+                        
+                        <label>Descricao</label>
+                        <input type="text" class="form-control"></textarea>
+                    
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </form>
@@ -67,14 +71,23 @@
                         <tr>
                           <td>1</td>
                           <td>Categoria 1</td>
+                          <td> <button class="btn btn-primary">Editar</button> </td>
+                          <td> <button class="btn btn-danger">Deletar</button> </td>
+                    
                         </tr>
                         <tr>
                           <td>2</td>
                           <td>Categoria 2</td>
+                          <td> <button class="btn btn-primary">Editar</button> </td>
+                          <td> <button class="btn btn-danger">Deletar</button> </td>
+                    	
                         </tr>
                         <tr>
                           <td>3</td>
                           <td>Categoria 3</td>
+                          <td> <button class="btn btn-primary">Editar</button> </td>
+                          <td> <button class="btn btn-danger">Deletar</button> </td>
+                    	
                         </tr>
                     </tbody>
                 </table>

@@ -6,20 +6,29 @@ import java.sql.DriverManager;
  *
  */
 public class ConnectionFactory {
-	/**
-	 * Trocar para postgres
-	 */
-	private final String URL = "jdbc:mysql://localhost/farmacia";
-	private final String USER = "root";
-	private final String PASS = "";
+	
+	private final String URL = "jdbc:postgresql://localhost/flexosoul";
+	private final String USER = "postgres";
+	private final String PASS = "senha";
 
 	public Connection createConnection() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("org.postgresql.Driver");
 			return (Connection) DriverManager.getConnection(URL, USER, PASS);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
+	
+	
+	public static void main(String[] args) {
+		ConnectionFactory cf = new ConnectionFactory();
+		Connection c = null;
+		
+		c = cf.createConnection();
+		
+		System.out.println(c);
+	}
+	
 }
