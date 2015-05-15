@@ -11,7 +11,7 @@
     <link href="static/css/style.css" rel="stylesheet" />
     <script src="static/js/jquery-1.11.1.js"></script>
     <script src="static/js/bootstrap.js"></script>
-    <script src="staticjs/jquery.easing.min.js"></script>
+    <script src="static/js/jquery.easing.min.js"></script>
     <script src="static/js/custom.js"></script>
 
 

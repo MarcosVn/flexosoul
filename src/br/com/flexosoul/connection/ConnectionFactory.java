@@ -6,7 +6,6 @@ import java.sql.DriverManager;
  *
  */
 public class ConnectionFactory {
-	
 	private final String URL = "jdbc:postgresql://localhost/flexosoul";
 	private final String USER = "postgres";
 	private final String PASS = "senha";
@@ -20,15 +19,4 @@ public class ConnectionFactory {
 		}
 		return null;
 	}
-	
-	
-	public static void main(String[] args) {
-		ConnectionFactory cf = new ConnectionFactory();
-		Connection c = null;
-		
-		c = cf.createConnection();
-		
-		System.out.println(c);
-	}
-	
 }
