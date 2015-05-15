@@ -30,9 +30,12 @@
             </div>
             <div class="navbar-collapse collapse navbar-right scroll-me">
                 <ul class="nav navbar-nav ">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="index.html#services">Serviços</a></li>
-                    <li><a href="index.html#contact">Contato</a></li>
+                    <li><a href="index.jsp">Início</a></li>
+                    <li><a href="index.jsp#services">Serviços</a></li>
+                    <li><a href="index.jsp#contact">Contato</a></li>
+                    <li><a href="categoria">Categoria</a></li>
+                	<li><a href="produto">Produto</a></li>
+                	<li><a href="usuario">Conta</a></li>    
                 </ul>
             </div>
 
@@ -43,15 +46,15 @@
         <div class="card">
             <div class="form-group">
                 <div class="row text-center">
-                    <h2 class="head-set">CATEGORIA</h2>
+                    <h1 class="head-set">Gerenciamento de Categorias</h1>
                 </div>
-                <form action="salvarCategoriaServlet">
+                <form action="categoriaServlet" method="post">
                     <div class="form-group">
                         <label>Nome</label>
-                        <input type="text" class="form-control"></textarea>
+                        <input type="text" name="nome" class="form-control"></textarea>
                         
                         <label>Descricao</label>
-                        <input type="text" class="form-control"></textarea>
+                        <input type="text" name="descricao" class="form-control"></textarea>
                     
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>

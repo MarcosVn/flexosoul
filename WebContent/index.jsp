@@ -34,10 +34,11 @@
                     <li><a href="#home">Início</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#contact">Contato</a></li>
-                	<li><a href="categoria">Categoria</a>
+                	<li><a href="categoria">Categoria</a></li>
+                	<li><a href="produto">Produto</a></li>
+                	<li><a href="usuario">Conta</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
     

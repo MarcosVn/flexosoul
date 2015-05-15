@@ -31,14 +31,14 @@
             </div>
             <div class="navbar-collapse collapse navbar-right scroll-me">
                 <ul class="nav navbar-nav ">
-                    <li><a href="/flexosoul/#home">Início</a></li>
-                    <li><a href="/flexosoul/#services">Serviços</a></li>
-                    <li><a href="/flexosoul/#contact">Contato</a></li>
-                	<li><a href="categoria">Categoria</a>
-                	<li><a href="user">Cadastro</a>
+                    <li><a href="index.jsp">Início</a></li>
+                    <li><a href="index.jsp#services">Serviços</a></li>
+                    <li><a href="index.jsp#contact">Contato</a></li>
+                    <li><a href="categoria">Categoria</a></li>
+                	<li><a href="produto">Produto</a></li>
+                	<li><a href="usuario">Conta</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
     

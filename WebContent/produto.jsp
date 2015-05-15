@@ -28,9 +28,12 @@
             </div>
             <div class="navbar-collapse collapse navbar-right scroll-me">
                 <ul class="nav navbar-nav ">
-                    <li><a href="index.html">IN√çCIO</a></li>
-                    <li><a href="index.html#services">SERVI√áOS</a></li>
-                    <li><a href="index.html#contact">CONTATO</a></li>
+                    <li><a href="index.jsp">InÌcio</a></li>
+                    <li><a href="index.jsp#services">ServiÁos</a></li>
+                    <li><a href="index.jsp#contact">Contato</a></li>
+                    <li><a href="categoria">Categoria</a></li>
+                	<li><a href="produto">Produto</a></li>
+                	<li><a href="usuario">Conta</a></li>
                 </ul>
             </div>
 
@@ -41,7 +44,7 @@
         <div class="card">
             <div class="form-group">
                 <div class="row text-center">
-                    <h2 class="head-set">PRODUTO</h2>
+                    <h1 class="head-set">Gerenciamento de Produtos</h2>
                 </div>
                 <form>
                     <div class="form-group">
@@ -56,7 +59,7 @@
                         <input type="file" id="exampleInputFile">
                     </div>
                     <div class="form-group">
-                        <label>Descri√ß√£o</label>
+                        <label>DescriÁ„o</label>
                         <textarea class="form-control" rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
@@ -66,9 +69,7 @@
     </div>
     
     <footer>
-        ¬© 2015 FlexoSoul
+        © 2015 FlexoSoul
     </footer>
-
 </body>
-
 </html>

@@ -1,14 +1,15 @@
 package br.com.flexosoul.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.com.flexosoul.dao.CategoriaDao;
+import br.com.flexosoul.model.Categoria;
 /**
  * 
  * @author marcos
@@ -22,6 +23,8 @@ public class SalvarCategoriaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher("categoria.jsp");
 		rd.forward(request, response);
+		
+		this.doPost(request, response);
 	}
 
 	
@@ -30,5 +33,13 @@ public class SalvarCategoriaServlet extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nome = request.getParameter("nome");
+		String categoriaStr = request.getParameter("descricao");
+		
+		/** 
+		 * colocar validação se o parametro for nulo ou ""
+		 */
+		CategoriaDao dao = new CategoriaDao();
+		dao.salvar(new Categoria(nome, categoriaStr));
 	}
 }
