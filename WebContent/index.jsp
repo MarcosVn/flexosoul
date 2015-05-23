@@ -34,9 +34,9 @@
                     <li><a href="#home">Início</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#contact">Contato</a></li>
-                	<li><a href="categoria">Categoria</a></li>
-                	<li><a href="produto">Produto</a></li>
-                	<li><a href="usuario">Conta</a></li>
+                	<li><a href="category">Categoria</a></li>
+                	<li><a href="product">Produto</a></li>
+                	<li><a href="user">Conta</a></li>
                 </ul>
             </div>
         </div>
