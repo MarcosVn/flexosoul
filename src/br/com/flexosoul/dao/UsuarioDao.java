@@ -16,11 +16,11 @@ import br.com.flexosoul.model.Usuario;
  * @author marcos
  *
  */
-public class UsuarioDao {
+public class UsuarioDao implements Dao {
 	private final String INSERT = "insert into Usuario values(null,?,?,?,?)";
 	private final String CONSULTA = "select * from Usuario";
 	private final String EXCLUIR = "DELETE FROM Usuario WHERE id = ?";
-	private final String EDITAR = "UPDATE Usuario SET name = ?, lastName = ?, email = ?, password = ? WHERE id = ?";
+	private final String EDITAR = "UPDATE Usuario SET nome = ?, sobrenome = ?, email = ?, senha = ? WHERE id = ?";
 	
 	private ConnectionFactory factory;
 
@@ -166,5 +166,17 @@ public class UsuarioDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public Usuario find(int idUsuario) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void excluir(Usuario usuario) {
+		// TODO Auto-generated method stub
+		
 	}
 }

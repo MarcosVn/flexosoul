@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  */
 
-@WebServlet("/salvarUsuario")
-public class SalvarUsuarioServlet extends HttpServlet {
+@WebServlet("/editarUsuario")
+public class EditarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public SalvarUsuarioServlet() {
+    public EditarUsuarioServlet() {
         super();
     }
 
