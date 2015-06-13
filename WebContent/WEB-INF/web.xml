@@ -21,11 +21,11 @@
     <url-pattern> /product/* </url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>usuarioServlet</servlet-name>
+    <servlet-name>salvarUsuario</servlet-name>
     <servlet-class>br.com.flexosoul.servlets.SalvarUsuarioServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>usuarioServlet</servlet-name>
+    <servlet-name>salvarUsuario</servlet-name>
     <url-pattern> /user/* </url-pattern>
   </servlet-mapping>
 </web-app>

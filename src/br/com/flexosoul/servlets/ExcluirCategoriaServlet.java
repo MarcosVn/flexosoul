@@ -11,38 +11,36 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.flexosoul.dao.CategoriaDao;
 import br.com.flexosoul.model.Categoria;
+
 /**
  * 
  * @author marcos
  *
  */
-@WebServlet("/categoriaServlet")
-public class SalvarCategoriaServlet extends HttpServlet {
+@WebServlet("/excluirCategoria")
+public class ExcluirCategoriaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+    
+    public ExcluirCategoriaServlet() {
+        super();
+    }
+
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		RequestDispatcher rd = request.getRequestDispatcher("categoria.jsp");
-		rd.forward(request, response);
-		
 		this.doPost(request, response);
 	}
 
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nome = request.getParameter("nome");
-		String categoriaStr = request.getParameter("descricao");
-		@SuppressWarnings("unused")
-		boolean r = ServletsUtil.temParametroNulo(request.getParameterMap());
+		int idCategoria = Integer.parseInt(request.getParameter("categoria"));
 		
-		if(!ServletsUtil.temParametroNulo(request.getParameterMap())) {
-			
-			CategoriaDao dao = new CategoriaDao();
-			dao.salvar(new Categoria(nome, categoriaStr));
-		}
+		CategoriaDao categoriaDao = new CategoriaDao();
+		
+		Categoria cat = categoriaDao.pesquisarPorId(idCategoria);
+		
+		categoriaDao.excluir(cat.getId());
+		
+		RequestDispatcher rd = request.getRequestDispatcher("consultarCategoria");
+		rd.forward(request, response);
 	}
 }

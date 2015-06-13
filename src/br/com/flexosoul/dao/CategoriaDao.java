@@ -17,8 +17,8 @@ import br.com.flexosoul.model.Categoria;
  *
  */
 public class CategoriaDao {
-	private final String INSERT = "insert into categoria values(null,?,?)";
-	private final String CONSULTA = "select * from categoria";
+	private final String INSERT = "INSERT INTO categoria (nome, descricao) values(?,?)";
+	private final String CONSULTA = "SELECT * FROM categoria";
 	private final String EXCLUIR = "DELETE FROM categoria WHERE id = ?";
 	private final String EDITAR = "UPDATE categoria SET nome = ?, descricao = ? WHERE id = ?";
 	
@@ -37,7 +37,9 @@ public class CategoriaDao {
 	private Categoria buildCategoriaFromResultSet(ResultSet rs)
 			throws SQLException {
 		
-		return new Categoria(rs.getString("nome"),
+		return new Categoria(
+				rs.getInt("id"),
+				rs.getString("nome"),
 				rs.getString("descricao"));
 	}
 	

@@ -31,6 +31,7 @@
             </div>
             <div class="navbar-collapse collapse navbar-right scroll-me">
                 <ul class="nav navbar-nav ">
+                	<li><a href="#">Admin</a>
                     <li><a href="#home">Início</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#contact">Contato</a></li>

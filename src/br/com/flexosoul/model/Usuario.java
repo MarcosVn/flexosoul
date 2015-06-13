@@ -12,7 +12,6 @@ public class Usuario {
 	private String email;
 	private String senha;
 	
-	public Usuario(){}
 	public Usuario(int id, String nome, String sobrenome, String email, String senha) {
 		this.id = id;
 		this.setNome(nome);
@@ -28,37 +27,22 @@ public class Usuario {
 		this.setSenha(senha);
 	}
 	
-	/**
-	 * @return the id
-	 */
 	public int getId() {
 		return id;
 	}
 
-	/**
-	 * @return the nome
-	 */
 	public String getNome() {
 		return nome;
 	}
 
-	/**
-	 * @return the sobrenome
-	 */
 	public String getSobrenome() {
 		return sobrenome;
 	}
 
-	/**
-	 * @return the email
-	 */
 	public String getEmail() {
 		return email;
 	}
 
-	/**
-	 * @return the senha
-	 */
 	public String getSenha() {
 		return senha;
 	}

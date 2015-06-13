@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
     <title>FlexoSoul</title>
-    <link href="../static/css/bootstrap.css" rel="stylesheet" />
-    <link href="../static/css/font-awesome.css" rel="stylesheet" />
-    <link href="../static/css/style.css" rel="stylesheet" />
-    <script src="../static/js/jquery-1.11.1.js"></script>
-    <script src="../static/js/bootstrap.js"></script>
-    <script src="../staticjs/jquery.easing.min.js"></script>
-    <script src="../static/js/custom.js"></script>
+    <link href="static/css/bootstrap.css" rel="stylesheet" />
+    <link href="static/css/font-awesome.css" rel="stylesheet" />
+    <link href="static/css/style.css" rel="stylesheet" />
+    <script src="static/js/jquery-1.11.1.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="staticjs/jquery.easing.min.js"></script>
+    <script src="static/js/custom.js"></script>
 
 
 </head>
@@ -51,7 +51,7 @@
                             <strong>Cadastro</strong>  
                         </div>
                         <div class="panel-body">
-                            <form role="form" action='userservlet' method="post">
+                            <form role="form" action='salvarUsuario' method="post">
                                 <div class="form-group input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
                                     <input type="text" class="form-control" id="nome"  name = "nome" placeholder="Nome" />
@@ -74,13 +74,16 @@
                                 </div> 
                                  <input type="submit" class="btn btn-success" value="Cadastrar">
                             </form>
+                            
                         </div>
+                        
                     </div>
+                    
+    			<a href="consultarUsuarios">Consultar Usuários</a>
                 </div>
             </div>
         </div>
     </div><!-- /.container -->
-    
     <footer>© 2015 FlexoSoul</footer>
 </body>
 </html>

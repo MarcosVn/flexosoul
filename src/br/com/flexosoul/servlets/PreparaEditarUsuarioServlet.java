@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import br.com.flexosoul.dao.Dao;
 import br.com.flexosoul.dao.UsuarioDao;
 import br.com.flexosoul.model.Usuario;
 
@@ -16,8 +15,6 @@ import br.com.flexosoul.model.Usuario;
  * @author Samara Cardoso
  *
  */
-
-
 @WebServlet("/preparaEditarUsuario")
 public class PreparaEditarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,12 +26,12 @@ public class PreparaEditarUsuarioServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int idUsuario = Integer.parseInt(request.getParameter("usuario"));
 		
-		Dao usuarioDao = new UsuarioDao();
-		Usuario usuario = usuarioDao.find(idUsuario);
+		UsuarioDao usuarioDao = new UsuarioDao();
+		Usuario user = usuarioDao.pesquisarPorId(idUsuario);
 
-		request.setAttribute("usuario", usuario);
+		request.setAttribute("user", user);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("editarUsuario.jsp");
 		rd.forward(request, response);
 	}
 

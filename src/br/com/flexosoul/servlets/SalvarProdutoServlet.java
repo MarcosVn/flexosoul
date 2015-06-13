@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.flexosoul.dao.ProdutoDao;
 import br.com.flexosoul.model.Categoria;
 import br.com.flexosoul.model.Produto;
-import br.com.flexosoul.utils.Utils;
 /**
  * 
  * @author marcos
@@ -41,7 +40,7 @@ public class SalvarProdutoServlet extends HttpServlet {
 		 * requisições que serão objetos
 		 */
 		
-		if(!Utils.temParametroNulo(request.getParameterMap())){
+		if(!ServletsUtil.temParametroNulo(request.getParameterMap())){
 			Categoria cat = (Categoria)(Object)produtoTipo;
 		
 			ProdutoDao dao = new ProdutoDao();

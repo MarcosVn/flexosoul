@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.flexosoul.dao.UsuarioDao;
+import br.com.flexosoul.model.Usuario;
+
 /**
  * @author Samara Cardoso
  *
@@ -22,7 +25,17 @@ public class EditarUsuarioServlet extends HttpServlet {
     }
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ServletsUtil.saveOrUpdateUsuario(request, response);
+		
+		String nome = request.getParameter("nome");
+		String sobrenome = request.getParameter("sobrenome");
+		String email = request.getParameter("email");
+		String senha = request.getParameter("senha");
+		int id = Integer.parseInt(request.getParameter("id"));
+		
+		if(!ServletsUtil.temParametroNulo(request.getParameterMap())) {
+			UsuarioDao dao = new UsuarioDao();
+			dao.editar(new Usuario(id,nome,sobrenome,email,senha));
+		}	
 	}
 
 }

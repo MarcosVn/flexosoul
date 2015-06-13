@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.flexosoul.dao.ProdutoDao;
 import br.com.flexosoul.model.Produto;
-import br.com.flexosoul.utils.Utils;
 
 /**
  * 
@@ -34,7 +33,7 @@ public class ConsultarProdutoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nome = request.getParameter("nome");
 		
-		if(!Utils.temParametroNulo(request.getParameterMap())) {
+		if(!ServletsUtil.temParametroNulo(request.getParameterMap())) {
 			ProdutoDao prod = new ProdutoDao();
 			List<Produto> lstProdutos = prod.pesquisar(nome);
 			

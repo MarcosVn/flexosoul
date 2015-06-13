@@ -16,7 +16,7 @@ import br.com.flexosoul.model.Produto;
  *
  */
 public class ProdutoDao {
-	private final String INSERT = "insert into produto values(null,?,?,?,?)";
+	private final String INSERT = "INSERT INTO produto values(null,?,?,?,?)";
 	private final String CONSULTA = "select * from produto";
 	private final String EXCLUIR = "DELETE FROM produto WHERE id = ?";
 	private final String EDITAR = "UPDATE produto SET nome = ?, descricao = ?, "

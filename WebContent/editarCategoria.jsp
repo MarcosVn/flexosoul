@@ -51,10 +51,10 @@
                 <form action="categoriaServlet" method="post">
                     <div class="form-group">
                         <label>Nome</label>
-                        <input type="text" name="nome" class="form-control"></textarea>
+                        <input type="text" name="nome" class="form-control" value=${categoria.nome}></textarea>
                         
                         <label>Descricao</label>
-                        <input type="text" name="descricao" class="form-control"></textarea>
+                        <input type="text" name="descricao" class="form-control" value=${categoria.descricao}></textarea>
                     
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>

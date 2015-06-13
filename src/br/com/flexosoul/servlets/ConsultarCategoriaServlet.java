@@ -12,13 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.flexosoul.dao.CategoriaDao;
 import br.com.flexosoul.model.Categoria;
-import br.com.flexosoul.utils.Utils;
 /**
  * 
  * @author marcos
  *
  */
-@WebServlet("/ConsultarCategoriaServlet")
+@WebServlet("/consultarCategoria")
 public class ConsultarCategoriaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,14 +25,17 @@ public class ConsultarCategoriaServlet extends HttpServlet {
         super();
     }
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		this.doGet(request, response);
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
 		String nome = request.getParameter("nome");
 		
-		if(!Utils.temParametroNulo(request.getParameterMap())) {
+		if(!ServletsUtil.temParametroNulo(request.getParameterMap())) {
 			CategoriaDao cat = new CategoriaDao();
 			List<Categoria> lstCategorias =  cat.pesquisar(nome);
 			
@@ -43,8 +45,4 @@ public class ConsultarCategoriaServlet extends HttpServlet {
 			rd.forward(request, response);
 		}		
 	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	}
-
 }
