@@ -29,7 +29,7 @@ public class SalvarProdutoServlet extends HttpServlet {
 		
 		this.doPost(request, response);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("produto.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("indexProduto.jsp");
 		rd.forward(request, response);
 		
 	}

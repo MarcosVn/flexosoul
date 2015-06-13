@@ -13,7 +13,7 @@
     <link href="static/css/style.css" rel="stylesheet" />
     <script src="static/js/jquery-1.11.1.js"></script>
     <script src="static/js/bootstrap.js"></script>
-    <script src="staticjs/jquery.easing.min.js"></script>
+    <script src="static/js/jquery.easing.min.js"></script>
     <script src="static/js/custom.js"></script>
 
 
@@ -54,34 +54,48 @@
                         </div>
                         <div class="panel-body">
                             <form method="post" action="consultarCategoria">
-								<span>Nome</span> <input type="text" name="nomeConsulta" /> <input type="submit" value="Pesquisar" />
+								<span>Nome</span> <input type="text" name="nomeConsulta" /> 
+								<button title="Clique para pesquisar" type="submit" class="btn">
+								<i class="glyphicon glyphicon-search">
+                    			</i>
+                    			Pesquisar
+								</button>
 						    </form>
 						    <c:if test="${not empty listaCategorias}">
 						    	<h4> Resultados encontrado(s): <b>${fn:length(listaCategorias)}</b></h4>
 								<table class="table table-striped">
 							      <thead>
 							        <tr>
-							          <th></th>
+							          
 							          <th>ID</th>
 							          <th>Nome</th>
 							          <th>Descrição</th>
+							          <th></th>
 							          <th></th>
 							        </tr>
 							      </thead>
 							      <c:forEach var="categoria" items="${listaCategorias}">
 							      <tbody>
 							        <tr>
-							          <td>
-							          	<form method="post" action="preparaEditarCategoria">
-											<input type="submit" value="Editar" /> <input type="hidden" value="${categoria.id}" name="categoria" />
-										</form>
-							          </td>	
+							          
 							          <td>${categoria.id}</td>
 							          <td>${categoria.nome}</td>
 							          <td>${categoria.descricao}</td>
 							          <td>
+							          	<form method="post" action="preparaEditarCategoria">
+											<button title="Editar ${categoria.nome}" class="btn btn-primary" type="submit"/>
+												<i class="glyphicon glyphicon-pencil">
+                    							</i>
+											</button> 
+											<input type="hidden" value="${categoria.id}" name="categoria" />
+										</form>
+							          </td>	
+							          <td>
 							          	<form method="post" action="excluirCategoria">
-											<input type="submit" value="Excluir" /> 
+											<button title="Excluir ${categoria.nome}" class="btn btn-danger" type="submit" value="Excluir" />
+												<i class="glyphicon glyphicon-trash">
+                    							</i>
+											</button> 
 											<input type="hidden" value="${categoria.id}" name="categoria" />
 										</form>	
 							          </td>
@@ -97,6 +111,6 @@
         </div>
     </div><!-- /.container -->
     
-    <footer>© 2015 FlexoSoul</footer>
+    <footer class="fix">© 2015 FlexoSoul</footer>
 </body>
 </html>

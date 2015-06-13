@@ -74,7 +74,12 @@
 							        <tr>
 							          <td>
 							          	<form method="post" action="preparaEditarUsuario">
-											<input type="submit" value="Editar" /> <input type="hidden" value="${usuario.id}" name="usuario" />
+											<button type="submit">
+												<i class="glyphicon glyphicon-floppy-disk">
+                    							</i>
+                    							Editar
+											</button> 
+											<input type="hidden" value="${usuario.id}" name="usuario" />
 										</form>
 							          </td>	
 							          <td>${usuario.id}</td>
@@ -99,6 +104,6 @@
         </div>
     </div><!-- /.container -->
     
-    <footer>© 2015 FlexoSoul</footer>
+    <footer class="fix">© 2015 FlexoSoul</footer>
 </body>
 </html>

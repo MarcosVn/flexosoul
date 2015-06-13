@@ -72,18 +72,22 @@
                                     <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
                                     <input type="password" class="form-control" id="conf_password" name="conf_password" placeholder="Confirmar Senha" />
                                 </div> 
-                                 <input type="submit" class="btn btn-success" value="Cadastrar">
+                                 <button type="submit" class="btn btn-primary">
+                                 <i class="glyphicon glyphicon-floppy-disk">
+                    			 </i>
+                    			 Criar
+                    			</button>
                             </form>
                             
                         </div>
-                        
+                        &nbsp;&nbsp;&nbsp;<a href="consultarUsuarios">Consultar Usuários</a>
                     </div>
                     
-    			<a href="consultarUsuarios">Consultar Usuários</a>
+    			
                 </div>
             </div>
         </div>
     </div><!-- /.container -->
-    <footer>© 2015 FlexoSoul</footer>
+    <footer class="fix">© 2015 FlexoSoul</footer>
 </body>
 </html>

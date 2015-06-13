@@ -28,7 +28,7 @@ public class ConsultarCategoriaServlet extends HttpServlet {
 		
 		CategoriaDao categoriaDao = new CategoriaDao();
 		request.setAttribute("listaCategorias", 
-				categoriaDao.pesquisar(request.getParameter("nome")));
+				categoriaDao.pesquisar(request.getParameter("nomeConsulta")));
 			
 		RequestDispatcher rd = request.getRequestDispatcher("consultaCategoria.jsp");
 		rd.forward(request, response);

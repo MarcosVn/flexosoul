@@ -46,7 +46,7 @@
         <div class="card">
             <div class="form-group">
                 <div class="row text-center">
-                    <h1 class="head-set">Gerenciamento de Categorias</h1>
+                    <h2 class="head-set">Edição da Categoria ${categoria.nome}</h2>
                 </div>
                 <form action="categoriaServlet" method="post">
                     <div class="form-group">
@@ -57,16 +57,18 @@
                         <input type="text" name="descricao" class="form-control" value=${categoria.descricao}></textarea>
                     
                     </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                    <a href="consultarCategoria" class="btn btn-danger">
+                    	Cancelar
+                    </a>
                 </form>
             </div>
         </div>
-        	<a href="consultarCategoria">Consultar Categorias</a>
         </div>
     </div>
     
-    <footer>
-        2015 FlexoSoul
+    <footer class="fix">
+        © 2015 FlexoSoul
     </footer>
 </body>
 </html>

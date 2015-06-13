@@ -29,7 +29,7 @@ public class ConsultarProdutoServlet extends HttpServlet {
 		
 		ProdutoDao produtoDao = new ProdutoDao();
 		request.setAttribute("listaProduto", 
-				produtoDao.pesquisar(request.getParameter("nome")));
+				produtoDao.pesquisar(request.getParameter("nomeConsulta")));
 			
 		RequestDispatcher rd = request.getRequestDispatcher("consultaProduto.jsp");
 		rd.forward(request, response);

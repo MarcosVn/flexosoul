@@ -73,7 +73,10 @@
                                     <input type="password" class="form-control" id="conf_password" name="conf_password" placeholder="Confirmar Senha" />
                                 </div>
                                 <input type="hidden" name="id" value="${user.id}"/>
-                                 <input type="submit" class="btn btn-success" value="Editar">
+                                 <button type="submit" class="btn btn-primary">Confirmar</button>
+                    			<a href="consultarCategoria" class="btn btn-danger">
+                    			Cancelar
+                    			</a>
                             </form>
                         </div>
                     </div>
@@ -82,6 +85,6 @@
         </div>
     </div><!-- /.container -->
     
-    <footer>Â© 2015 FlexoSoul</footer>
+    <footer>© 2015 FlexoSoul</footer>
 </body>
 </html>

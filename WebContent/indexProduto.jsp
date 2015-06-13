@@ -47,7 +47,7 @@
 	        <div class="card">
 	            <div class="form-group">
 	                <div class="row text-center">
-	                    <h2 class="head-set">PRODUTO</h2>
+	                    <h2 class="head-set">Gerenciamento de Produtos</h2>
 	                </div>
 	                <form method="post" action="salvarProduto">
 	                	<div class="form-group">
@@ -71,7 +71,10 @@
 	                        <label>Descrição</label>
 	                        <textarea class="form-control" rows="3" name="descricao"></textarea>
 	                    </div>
-	                    <button type="submit" class="btn btn-primary">Salvar</button>
+	                    <button type="submit" class="btn btn-primary">
+	                    <i class="glyphicon glyphicon-floppy-disk">
+                    	</i>
+	                    Criar</button>
 	                </form>
 	            </div>
 	            <a href="consultarProduto">Consultar Produtos</a>

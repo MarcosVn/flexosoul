@@ -82,6 +82,9 @@ section {
     padding-bottom: 40px;
 }
 
+.fix {
+	bottom: 0;
+}
 .parallax-like {
     background: url(../img/stats.jpg) no-repeat center center; /* DEFINE IMAGE PATH CAREFULLY*/
     padding: 0;
@@ -100,13 +103,13 @@ section {
     }
 
 footer {
+	position: absolute;
+	width: 100%;
 	padding: 20px;
     font-size: 15px;
     text-align: center;
-    font-weight: 900;
     background-color: rgb(35, 133, 161);
     color: #fff;
-    bottom: 0;
 }
 
 footer a, footer a:hover {

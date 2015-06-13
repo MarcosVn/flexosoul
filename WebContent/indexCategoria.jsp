@@ -57,16 +57,18 @@
                         <input type="text" name="descricao" class="form-control"></textarea>
                     
                     </div>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="submit" class="btn btn-primary">
+                    <i class="glyphicon glyphicon-floppy-disk">
+                    </i>
+                    Salvar</button>
                 </form>
             </div>
+            <a href="consultarCategoria">Consultar Categorias</a>
         </div>
-        	<a href="consultarCategoria">Consultar Categorias</a>
+        	
         </div>
-    </div>
-    
-    <footer>
-        2015 FlexoSoul
+    <footer class="fix">
+        © 2015 FlexoSoul
     </footer>
 </body>
 </html>

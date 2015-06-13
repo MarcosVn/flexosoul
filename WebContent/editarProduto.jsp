@@ -47,7 +47,7 @@
 	        <div class="card">
 	            <div class="form-group">
 	                <div class="row text-center">
-	                    <h2 class="head-set">EDIÇÃO DE PRODUTO</h2>
+	                    <h2 class="head-set">Edição do Produto ${produto.nome} </h2>
 	                </div>
 	                <form method="post" action="editarProduto">
 	                	<div class="form-group">
@@ -71,7 +71,10 @@
 	                        <textarea class="form-control" rows="3" name="descricao">${produto.descricao}</textarea>
 	                    </div>
 	                    <input type="hidden" name="id" value="${produto.id}"/>
-	                    <button type="submit" class="btn btn-primary">Salvar Edição</button>
+	                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                    	<a href="consultarCategoria" class="btn btn-danger">
+                    	Cancelar
+                    	</a>
 	                </form>
 	            </div>
 	        </div>

@@ -22,7 +22,7 @@ public class SalvarCategoriaServlet extends HttpServlet {
        
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher rd = request.getRequestDispatcher("categoria.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("indexCategoria.jsp");
 		rd.forward(request, response);
 		
 		this.doPost(request, response);

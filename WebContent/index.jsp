@@ -49,7 +49,7 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
 
                     <h1>FLEXO SOUL </h1>
-                    <h2>ETIQUETAS </h2>
+                    <h2>A ALMA DA ETIQUETA</h2>
                     <p class="p-cls">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
