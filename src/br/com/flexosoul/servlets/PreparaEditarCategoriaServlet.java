@@ -18,10 +18,10 @@ import br.com.flexosoul.model.Categoria;
  *
  */
 @WebServlet("/preparaEditarCategoria")
-public class PreparaEditarCategoria extends HttpServlet {
+public class PreparaEditarCategoriaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public PreparaEditarCategoria() {
+    public PreparaEditarCategoriaServlet() {
         super();
     }
 

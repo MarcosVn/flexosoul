@@ -36,10 +36,9 @@ public class SalvarCategoriaServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nome = request.getParameter("nome");
 		String categoriaStr = request.getParameter("descricao");
-		@SuppressWarnings("unused")
-		boolean r = ServletsUtil.temParametroNulo(request.getParameterMap());
 		
-		if(!ServletsUtil.temParametroNulo(request.getParameterMap())) {
+		
+		if(!ServletUtils.temParametroNulo(request.getParameterMap())) {
 			
 			CategoriaDao dao = new CategoriaDao();
 			dao.salvar(new Categoria(nome, categoriaStr));

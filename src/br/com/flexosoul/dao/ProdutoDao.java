@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.flexosoul.connection.ConnectionFactory;
-import br.com.flexosoul.model.Categoria;
 import br.com.flexosoul.model.Produto;
 
 /**
@@ -16,11 +15,10 @@ import br.com.flexosoul.model.Produto;
  *
  */
 public class ProdutoDao {
-	private final String INSERT = "INSERT INTO produto values(null,?,?,?,?)";
+	private final String INSERT = "INSERT INTO produto (nome, descricao, idcategoria) values(?,?,?)";
 	private final String CONSULTA = "select * from produto";
 	private final String EXCLUIR = "DELETE FROM produto WHERE id = ?";
-	private final String EDITAR = "UPDATE produto SET nome = ?, descricao = ?, "
-			+ "tipo = ? WHERE id = ?";
+	private final String EDITAR = "UPDATE produto SET nome = ?, descricao = ?, idCategoria = ? WHERE id = ?";
 	
 	private ConnectionFactory factory;
 
@@ -42,11 +40,12 @@ public class ProdutoDao {
 	private Produto buildProdutoFromResultSet(ResultSet rs)
 			throws SQLException {
 		
-		Categoria cat = (Categoria)rs.getObject("categoria");
-		
-		return new Produto(rs.getString("nome"),
-				rs.getString("descricao"), 
-				cat);
+		return new Produto(
+				rs.getInt("id"),
+				rs.getString("nome"),
+				rs.getString("descricao"),
+				rs.getInt("idCategoria")
+				);
 	}
 	
 	/**
@@ -61,7 +60,7 @@ public class ProdutoDao {
 			PreparedStatement st = conexao.prepareStatement(INSERT);
 			st.setString(1, produto.getNome());
 			st.setString(2, produto.getDescricao());
-			st.setObject(3, produto.getProdutoTipo());
+			st.setObject(3, produto.getCatId());
 			st.execute();
 
 		} catch (SQLException e) {
@@ -136,11 +135,11 @@ public class ProdutoDao {
 	}
 
 	
-	public void excluir(Produto produto) {
+	public void excluir(int id) {
 		try {
 			Connection connection = factory.createConnection();
 			PreparedStatement st = connection.prepareStatement(EXCLUIR);
-			st.setInt(1, produto.getId());
+			st.setInt(1, id);
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -153,7 +152,8 @@ public class ProdutoDao {
 			PreparedStatement st = connection.prepareStatement(EDITAR);
 			st.setString(1, produto.getNome());
 			st.setString(2, produto.getDescricao());
-			st.setObject(3, produto.getProdutoTipo());
+			st.setInt(3, produto.getCatId());
+			st.setInt(4, produto.getId());
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -47,18 +47,17 @@
 	        <div class="card">
 	            <div class="form-group">
 	                <div class="row text-center">
-	                    <h2 class="head-set">PRODUTO</h2>
+	                    <h2 class="head-set">EDIÇÃO DE PRODUTO</h2>
 	                </div>
-	                <form method="post" action="salvarProduto">
+	                <form method="post" action="editarProduto">
 	                	<div class="form-group">
 	                        <label>Nome</label>
-	                        <input type="text" class="form-control" rows="3" name="nome"></input>
+	                        <input type="text" class="form-control" rows="3" name="nome" value="${produto.nome}"></input>
 	                    </div>
 	                    <label>Categoria</label>
 	                    <div class="form-group">
 	                        <select class="form-control" name="categoria">
 	                          <c:forEach var="categoria" items="${listaCategoria}">
-	                          	<!--  <input type="hidden" name="categoria">${categoria.id }</input>-->
 	                          	<option value=${categoria.id} name="categoria">${categoria.nome}</option>
 	                          </c:forEach>
 	                        </select>
@@ -69,12 +68,12 @@
 	                    </div>
 	                    <div class="form-group">
 	                        <label>Descrição</label>
-	                        <textarea class="form-control" rows="3" name="descricao"></textarea>
+	                        <textarea class="form-control" rows="3" name="descricao">${produto.descricao}</textarea>
 	                    </div>
-	                    <button type="submit" class="btn btn-primary">Salvar</button>
+	                    <input type="hidden" name="id" value="${produto.id}"/>
+	                    <button type="submit" class="btn btn-primary">Salvar Edição</button>
 	                </form>
 	            </div>
-	            <a href="consultarProduto">Consultar Produtos</a>
 	        </div>
 	    </div>
 	    

@@ -28,7 +28,7 @@ public class SalvarUsuarioServlet extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("indexUsuario.jsp");
 		rd.forward(request, response);
 		
-		if(!ServletsUtil.temParametroNulo(request.getParameterMap())) {
+		if(!ServletUtils.temParametroNulo(request.getParameterMap())) {
 			String nome = request.getParameter("nome");
 			String sobrenome = request.getParameter("sobrenome");
 			String email = request.getParameter("email");

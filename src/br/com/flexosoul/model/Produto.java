@@ -7,24 +7,21 @@ public class Produto {
 	private int id;
 	private String nome;
 	private String descricao;
-	private Categoria produtoTipo;
+	private int catId;
 	private List<File> produtoImagens = null;
 	
-	public Produto() {}
-	
-	public Produto(String nome, String descricao, Categoria produtoTipo,
-			List<File> produtoImagens) {
-		
+
+	public Produto(String nome, String descricao, int catId) {
 		this.nome = nome;
 		this.descricao = descricao;
-		this.produtoTipo = produtoTipo;
-		this.produtoImagens = produtoImagens;
+		this.setCatId(catId);
 	}
-	
-	public Produto(String nome, String descricao, Categoria produtoTipo) {
+
+	public Produto(int id, String nome, String descricao, int catId) {
+		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
-		this.produtoTipo = produtoTipo;
+		this.setCatId(catId);
 	}
 	
 	public String getNome() {
@@ -39,12 +36,7 @@ public class Produto {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Categoria getProdutoTipo() {
-		return produtoTipo;
-	}
-	public void setProdutoTipo(Categoria produtoTipo) {
-		this.produtoTipo = produtoTipo;
-	}
+
 	public List<File> getEtiquetaImagens() {
 		return produtoImagens;
 	}
@@ -57,5 +49,13 @@ public class Produto {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getCatId() {
+		return catId;
+	}
+
+	public void setCatId(int catId) {
+		this.catId = catId;
 	}
 }

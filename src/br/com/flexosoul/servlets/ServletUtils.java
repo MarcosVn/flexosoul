@@ -8,9 +8,7 @@ import java.util.Set;
  * @author marcos
  *
  */
-public class ServletsUtil {
-	public static final String CONSULTA_JSP = "consultaUsuario.jsp";
-	public static final String CONSULTA_SERVLET = "consultarUsuarios";
+public class ServletUtils {
 	
 	/**
 	 * 
@@ -19,6 +17,8 @@ public class ServletsUtil {
 	 */
 	public static boolean temParametroNulo(Map<String, String[]> mapa){
 		Set<String> keys = mapa.keySet();
+		if(keys.size() == 0) return true;
+		
 		for (String key : keys) {
 			for(int i = 0; i < mapa.get(key).length; i++) {
 				if(mapa.get(key)[i] == null) return true;

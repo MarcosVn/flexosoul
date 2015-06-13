@@ -2,6 +2,7 @@ package br.com.flexosoul.servlets;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,11 +21,8 @@ import br.com.flexosoul.model.Usuario;
 public class EditarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public EditarUsuarioServlet() {
-        super();
-    }
-
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		
 		String nome = request.getParameter("nome");
 		String sobrenome = request.getParameter("sobrenome");
@@ -32,10 +30,10 @@ public class EditarUsuarioServlet extends HttpServlet {
 		String senha = request.getParameter("senha");
 		int id = Integer.parseInt(request.getParameter("id"));
 		
-		if(!ServletsUtil.temParametroNulo(request.getParameterMap())) {
-			UsuarioDao dao = new UsuarioDao();
-			dao.editar(new Usuario(id,nome,sobrenome,email,senha));
-		}	
+		new UsuarioDao().editar(new Usuario(id,nome,sobrenome,email,senha));
+		
+		RequestDispatcher rd = request.getRequestDispatcher("consultarUsuarios");
+		rd.forward(request, response);
 	}
 
 }

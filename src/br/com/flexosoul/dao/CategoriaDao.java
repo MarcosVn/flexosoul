@@ -43,6 +43,30 @@ public class CategoriaDao {
 				rs.getString("descricao"));
 	}
 	
+	
+	
+	public List<Categoria> pesquisarAllCategorias() {
+		List<Categoria> categorias = new ArrayList<>();
+		try {
+			Connection connection = factory.createConnection();
+			PreparedStatement st = connection.prepareStatement(CONSULTA);
+			ResultSet rs = st.executeQuery();
+
+			while (rs.next()) {
+				categorias.add(buildCategoriaFromResultSet(rs));
+			}
+			
+			rs.close();
+			st.close();
+			connection.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return categorias;
+	}
+	
 	/**
 	 * 
 	 * @param categoria

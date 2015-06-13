@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.flexosoul.dao.CategoriaDao;
-import br.com.flexosoul.model.Categoria;
 
 /**
  * 
@@ -21,24 +20,19 @@ import br.com.flexosoul.model.Categoria;
 public class ExcluirCategoriaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    
-    public ExcluirCategoriaServlet() {
-        super();
-    }
-
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
 		this.doPost(request, response);
 	}
-
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		
 		int idCategoria = Integer.parseInt(request.getParameter("categoria"));
 		
 		CategoriaDao categoriaDao = new CategoriaDao();
-		
-		Categoria cat = categoriaDao.pesquisarPorId(idCategoria);
-		
-		categoriaDao.excluir(cat.getId());
+		categoriaDao.excluir(categoriaDao.pesquisarPorId(idCategoria).getId());
 		
 		RequestDispatcher rd = request.getRequestDispatcher("consultarCategoria");
 		rd.forward(request, response);

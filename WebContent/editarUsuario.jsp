@@ -51,7 +51,7 @@
                             <strong>Editar Cadastro</strong>  
                         </div>
                         <div class="panel-body">
-                            <form role="form" action='editarUsuario' method="post">
+                            <form role="form" action="editarUsuario" method="post">
                                 <div class="form-group input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"  ></i></span>
                                     <input type="text" class="form-control" id="nome"  name = "nome" placeholder="Nome" value="${user.nome}"/>

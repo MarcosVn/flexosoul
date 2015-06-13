@@ -1,8 +1,6 @@
 package br.com.flexosoul.servlets;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,23 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import br.com.flexosoul.dao.UsuarioDao;
-import br.com.flexosoul.model.Usuario;
-
 
 /**
  * @author Samara Cardoso
  *
  */
-
-
 @WebServlet("/consultarUsuarios")
 public class ConsultarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public ConsultarUsuarioServlet() {
-        super();
-    }
-    
     protected void service(HttpServletRequest request, HttpServletResponse response) 
     		throws ServletException, IOException {
     	this.doGet(request, response);
@@ -34,14 +24,12 @@ public class ConsultarUsuarioServlet extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     		throws ServletException, IOException {
-    	String nome = request.getParameter("nomeConsulta");
-    	
-    	UsuarioDao userDao = new UsuarioDao();
-    	List<Usuario> listaUsuarios = userDao.pesquisar(nome);
-    	
-		request.setAttribute("listaUsuarios", listaUsuarios);
+    
+    	UsuarioDao usuarioDao = new UsuarioDao();
+		request.setAttribute("listaUsuarios", 
+				usuarioDao.pesquisar(request.getParameter("nomeConsulta")));
 		
-		RequestDispatcher rd = request.getRequestDispatcher(ServletsUtil.CONSULTA_JSP);
+		RequestDispatcher rd = request.getRequestDispatcher("consultaUsuario.jsp");
 		rd.forward(request, response);
     }
 }
