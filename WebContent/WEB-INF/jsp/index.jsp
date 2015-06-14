@@ -3,10 +3,9 @@
 
 <!DOCTYPE html>
 <html>
-<%@ include file="/WEB-INF/jsp/head.jsp" %>
+<%@ include file="head.jsp" %>
 <body>
-    
-    <%@ include file="/WEB-INF/jsp/indexHeader.jsp" %>
+    <%@ include file="header.jsp" %>
     <div id="home">
         <div class="overlay">
             <div class="container">
@@ -112,7 +111,7 @@
         </div>
     </section>
     
-	<%@ include file="/WEB-INF/jsp/footer.jsp" %>
+	<%@ include file="footer.jsp" %>
 
 </body>
 </html>

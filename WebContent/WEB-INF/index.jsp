@@ -6,7 +6,7 @@
 <%@ include file="/WEB-INF/jsp/head.jsp" %>
 <body>
     
-    <%@ include file="/WEB-INF/jsp/indexHeader.jsp" %>
+    <%@ include file="/WEB-INF/jsp/head.jsp" %>
     <div id="home">
         <div class="overlay">
             <div class="container">
