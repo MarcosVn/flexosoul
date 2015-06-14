@@ -24,7 +24,7 @@
 							</form>
 							<c:if test="${not empty listaCategorias}">
 								<h4>
-									Resultados encontrado(s): <b>${fn:length(listaCategorias)}</b>
+									Resultado(s) encontrado(s): <b>${fn:length(listaCategorias)}</b>
 								</h4>
 								<table class="table table-striped">
 									<thead>

@@ -34,7 +34,7 @@ public class ExcluirProdutoServlet extends HttpServlet {
 		ProdutoDao produtoDao = new ProdutoDao();
 		produtoDao.excluir(produtoDao.pesquisarPorId(idProduto).getId());
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/consultarProduto");
+		RequestDispatcher rd = request.getRequestDispatcher("consultarProduto");
 		rd.forward(request, response);
 	}
 }

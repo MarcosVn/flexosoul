@@ -36,7 +36,7 @@
                                     <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
                                     <input type="password" class="form-control" id="conf_password" name="conf_password" placeholder="Confirmar Senha" />
                                 </div> 
-                                 <button type="submit" class="btn btn-primary">
+                                 <button style="margin-bottom: 50px;" type="submit" class="btn btn-primary">
                                  <i class="glyphicon glyphicon-floppy-disk">
                     			 </i>
                     			 Salvar
@@ -44,7 +44,9 @@
                             </form>
                             
                         </div>
-                        &nbsp;&nbsp;&nbsp;<a href="consultarUsuarios">Consultar Usuários</a>
+                        &nbsp;&nbsp;&nbsp;<a href="consultarUsuarios">
+                        <i class="glyphicon glyphicon-list-alt"></i>
+                        Consultar Usuários</a>
                     </div>
                     
     			

@@ -44,8 +44,11 @@
 										name="conf_password" placeholder="Confirmar Senha" />
 								</div>
 								<input type="hidden" name="id" value="${user.id}" />
-								<button type="submit" class="btn btn-primary">Confirmar</button>
-								<a href="consultarCategoria" class="btn btn-danger">
+								<button type="submit" class="btn btn-primary">
+									<i class="glyphicon glyphicon-ok"></i>								
+								Confirmar</button>
+								<a href="consultarUsuario" class="btn btn-danger">
+								<i class="glyphicon glyphicon-ban-circle"></i>
 									Cancelar </a>
 							</form>
 						</div>
@@ -56,6 +59,6 @@
 	</div>
 	<!-- /.container -->
 
-	<%@ include file="footer.jsp"%>
+	<footer class="fix">© 2015 FlexoSoul</footer>
 </body>
 </html>

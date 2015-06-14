@@ -10,7 +10,7 @@
         <div class="card">
             <div class="form-group">
                 <div class="row text-center">
-                    <h1 class="head-set">Gerenciamento de Categorias</h1>
+                    <h2 class="head-set">Gerenciamento de Categorias</h2>
                 </div>
                 <form action="categoriaServlet" method="post">
                     <div class="form-group">
@@ -21,13 +21,15 @@
                         <input type="text" name="descricao" class="form-control"/>
                     
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button style="margin-bottom: 50px;" type="submit" class="btn btn-primary">
                     <i class="glyphicon glyphicon-floppy-disk">
                     </i>
                     Salvar</button>
                 </form>
             </div>
-            <a href="consultarCategoria">Consultar Categorias</a>
+            <a href="consultarCategoria">
+            <i class="glyphicon glyphicon-list-alt"></i>
+            Consultar Categorias</a>
         </div>    	
     </div>
     <footer class="fix">

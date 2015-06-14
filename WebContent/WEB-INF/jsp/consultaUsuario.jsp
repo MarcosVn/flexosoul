@@ -18,43 +18,50 @@
 						</div>
 						<div class="panel-body">
 							<form method="post" action="consultarUsuarios">
-								<span>Nome</span> <input type="text" name="nomeConsulta" /> <input
-									type="submit" value="Pesquisar" />
+								<span>Nome</span> <input type="text" name="nomeConsulta" />
+								<button title="Clique para pesquisar" type="submit" class="btn">
+									<i class="glyphicon glyphicon-search"></i> Pesquisar
+								</button>
 							</form>
 							<c:if test="${not empty listaUsuarios}">
 								<h4>
-									Resultados encontrado(s): <b>${fn:length(listaUsuarios)}</b>
+									Resultado(s) encontrado(s): <b>${fn:length(listaUsuarios)}</b>
 								</h4>
 								<table class="table table-striped">
 									<thead>
 										<tr>
-											<th></th>
+											
 											<th>ID</th>
 											<th>Nome</th>
 											<th>Sobrenome</th>
 											<th>E-mail</th>
+											<th></th>
 											<th></th>
 										</tr>
 									</thead>
 									<c:forEach var="usuario" items="${listaUsuarios}">
 										<tbody>
 											<tr>
-												<td>
-													<form method="post" action="preparaEditarUsuario">
-														<button type="submit">
-															<i class="glyphicon glyphicon-floppy-disk"> </i> Editar
-														</button>
-														<input type="hidden" value="${usuario.id}" name="usuario" />
-													</form>
-												</td>
+												
 												<td>${usuario.id}</td>
 												<td>${usuario.nome}</td>
 												<td>${usuario.sobrenome}</td>
 												<td>${usuario.email}</td>
 												<td>
+													<form method="post" action="preparaEditarUsuario">
+														<button title="Editar ${usuario.nome}" class="btn btn-primary" type="submit">
+															<i class="glyphicon glyphicon-pencil"> </i>
+														</button>
+														<input type="hidden" value="${usuario.id}" name="usuario" />
+													</form>
+												</td>
+												<td>
 													<form method="post" action="excluirUsuario">
-														<input type="submit" value="Excluir" /> <input
-															type="hidden" value="${usuario.id}" name="usuario" />
+														<button title="Excluir ${usuario.nome}"class="btn btn-danger" type="submit">
+															<i class="glyphicon glyphicon-trash"></i>
+														</button>
+														<input
+														type="hidden" value="${usuario.id}" name="usuario" />
 													</form>
 												</td>
 											</tr>

@@ -34,7 +34,7 @@ public class ExcluirUsuarioServlet extends HttpServlet {
 		usuarioDao.excluir(
 				usuarioDao.pesquisarPorId(idUsuario).getId());
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/consultarUsuarios");
+		RequestDispatcher rd = request.getRequestDispatcher("consultarUsuarios");
 		rd.forward(request, response);
 	}
 }

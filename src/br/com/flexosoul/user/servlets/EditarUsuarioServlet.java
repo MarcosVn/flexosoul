@@ -32,7 +32,7 @@ public class EditarUsuarioServlet extends HttpServlet {
 		
 		new UsuarioDao().editar(new Usuario(id, nome, sobrenome, email, senha));
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/consultarUsuarios");
+		RequestDispatcher rd = request.getRequestDispatcher("consultarUsuarios");
 		rd.forward(request, response);
 	}
 }

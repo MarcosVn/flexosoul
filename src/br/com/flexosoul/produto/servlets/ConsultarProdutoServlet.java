@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.flexosoul.categoria.dao.CategoriaDao;
+import br.com.flexosoul.model.Categoria;
 import br.com.flexosoul.produto.dao.ProdutoDao;
 
 /**

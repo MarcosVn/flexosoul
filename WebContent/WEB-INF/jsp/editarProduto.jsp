@@ -21,7 +21,7 @@
 					<div class="form-group">
 						<select class="form-control" name="categoria">
 							<c:forEach var="categoria" items="${listaCategoria}">
-								<option value=${categoria.id } name="categoria">${categoria.nome}</option>
+								<option value="${categoria.id}" name="categoria">${categoria.nome}</option>
 							</c:forEach>
 						</select>
 					</div>
@@ -33,13 +33,17 @@
 						<textarea class="form-control" rows="3" name="descricao">${produto.descricao}</textarea>
 					</div>
 					<input type="hidden" name="id" value="${produto.id}" />
-					<button type="submit" class="btn btn-primary">Confirmar</button>
-					<a href="consultarCategoria" class="btn btn-danger"> Cancelar </a>
+					<button type="submit" class="btn btn-primary">
+									<i class="glyphicon glyphicon-ok"></i>								
+								Confirmar</button>
+								<a href="consultarProduto" class="btn btn-danger">
+								<i class="glyphicon glyphicon-ban-circle"></i>
+									Cancelar </a>
 				</form>
 			</div>
 		</div>
 	</div>
 
-	<%@ include file="footer.jsp"%>
+	<footer class="fix">© 2015 FlexoSoul</footer>
 </body>
 </html>

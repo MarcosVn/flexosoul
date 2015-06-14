@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.flexosoul.categoria.dao.CategoriaDao;
 import br.com.flexosoul.connection.ConnectionFactory;
 import br.com.flexosoul.produto.model.Produto;
 
@@ -44,7 +45,8 @@ public class ProdutoDao {
 				rs.getInt("id"),
 				rs.getString("nome"),
 				rs.getString("descricao"),
-				rs.getInt("idCategoria")
+				rs.getInt("idCategoria"),
+				new CategoriaDao().pesquisarPorId(rs.getInt("idCategoria")).getNome()
 				);
 	}
 	

@@ -34,13 +34,15 @@
 		            	<label>Descrição</label>
 		                <textarea class="form-control" rows="3" name="descricao"></textarea>
 		            </div>
-		            <button type="submit" class="btn btn-primary">
+		            <button style="margin-bottom: 50px;" type="submit" class="btn btn-primary">
 		            	<i class="glyphicon glyphicon-floppy-disk"></i>
 		                Salvar
 		            </button>
 	            </form>
 	        </div>
-	        <a href="consultarProduto">Consultar Produtos</a>
+	        <a href="consultarProduto">
+	        <i class="glyphicon glyphicon-list-alt"></i>
+	        Consultar Produtos</a>
 	    </div>
 	</div>
 	    

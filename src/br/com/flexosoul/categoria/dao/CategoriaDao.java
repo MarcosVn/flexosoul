@@ -179,6 +179,7 @@ public class CategoriaDao {
 			PreparedStatement st = connection.prepareStatement(EDITAR);
 			st.setString(1, categoria.getNome());
 			st.setString(2, categoria.getDescricao());
+			st.setInt(3, categoria.getId());
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

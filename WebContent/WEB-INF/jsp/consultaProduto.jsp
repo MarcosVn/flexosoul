@@ -24,7 +24,7 @@
 							</form>
 							<c:if test="${not empty listaProduto}">
 								<h4>
-									Resultados encontrado(s): <b>${fn:length(listaProduto)}</b>
+									Resultado(s) encontrado(s): <b>${fn:length(listaProduto)}</b>
 								</h4>
 								<table class="table table-striped">
 									<thead>
@@ -32,6 +32,7 @@
 											<th>ID</th>
 											<th>Nome</th>
 											<th>Descrição</th>
+											<th>Categoria</th>
 											<th></th>
 											<th></th>
 										</tr>
@@ -42,6 +43,7 @@
 												<td>${produto.id}</td>
 												<td>${produto.nome}</td>
 												<td>${produto.descricao}</td>
+												<td>${produto.catId} - ${produto.catNome}</td>
 												<td>
 													<form method="post" action="preparaEditarProduto">
 														<button title="Editar ${produto.nome}"

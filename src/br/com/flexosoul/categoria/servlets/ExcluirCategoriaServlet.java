@@ -34,7 +34,7 @@ public class ExcluirCategoriaServlet extends HttpServlet {
 		CategoriaDao categoriaDao = new CategoriaDao();
 		categoriaDao.excluir(categoriaDao.pesquisarPorId(idCategoria).getId());
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/consultarCategoria");
+		RequestDispatcher rd = request.getRequestDispatcher("consultarCategoria");
 		rd.forward(request, response);
 	}
 }

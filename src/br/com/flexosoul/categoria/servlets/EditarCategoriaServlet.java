@@ -31,7 +31,7 @@ public class EditarCategoriaServlet extends HttpServlet {
 			
 			new CategoriaDao().editar(new Categoria(id, nome, descricao));
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/consultarCategoria");
+			RequestDispatcher rd = request.getRequestDispatcher("consultarCategoria");
 			rd.forward(request, response);
 		}	
 	}

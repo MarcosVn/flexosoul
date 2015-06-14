@@ -8,6 +8,7 @@ public class Produto {
 	private String nome;
 	private String descricao;
 	private int catId;
+	private String catNome;
 	private List<File> produtoImagens = null;
 	
 
@@ -22,6 +23,14 @@ public class Produto {
 		this.nome = nome;
 		this.descricao = descricao;
 		this.setCatId(catId);
+	}
+	
+	public Produto(int id, String nome, String descricao, int catId, String catNome) {
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+		this.setCatId(catId);
+		this.setCatNome(catNome);
 	}
 	
 	public String getNome() {
@@ -57,5 +66,13 @@ public class Produto {
 
 	public void setCatId(int catId) {
 		this.catId = catId;
+	}
+
+	public String getCatNome() {
+		return catNome;
+	}
+
+	public void setCatNome(String catNome) {
+		this.catNome = catNome;
 	}
 }

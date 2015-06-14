@@ -24,14 +24,14 @@ public class EditarProdutoServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) 
     		throws ServletException, IOException {
 
-		
 		String nome = request.getParameter("nome");
+		String idCat = request.getParameter("categoria");
 		String descricao = request.getParameter("descricao");
 		int id = Integer.parseInt(request.getParameter("id"));
 			
-		new ProdutoDao().editar(new Produto(id, nome, descricao, 25));
+		new ProdutoDao().editar(new Produto(id, nome, descricao, Integer.parseInt(idCat)));
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/consultarProduto");
+		RequestDispatcher rd = request.getRequestDispatcher("consultarProduto");
 		rd.forward(request, response);
 	}
 }
